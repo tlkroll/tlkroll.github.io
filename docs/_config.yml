@@ -10,3 +10,5 @@ github_username:  tlkroll
 theme: jekyll-theme-midnight
 plugins:
   - jekyll-feed
+
+markdown: kramdown
