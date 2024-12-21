@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Testing the blogging feature"
+date:   2024-12-20 14:32:38 -0500
+categories: front-end development
+author: Tom
+---
+just wanted to test this feature to see how it works.
+
+ok?
+
+ok
