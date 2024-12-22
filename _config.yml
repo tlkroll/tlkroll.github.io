@@ -1,0 +1,15 @@
+title: Tom Kroll
+email: tlkroll@yahoo.com
+description: >- 
+  Programming, reverse engineering, and binary exploitation
+baseurl: "" 
+url: "" 
+layouts_dir: "my_layouts"
+github_username:  tlkroll
+
+theme: jekyll-theme-midnight
+plugins:
+  - jekyll-feed
+
+markdown: kramdown
+#making some changes just for the hell of it
