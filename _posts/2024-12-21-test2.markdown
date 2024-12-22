@@ -2,5 +2,6 @@
 layout: post
 title:  wtf?
 author: Tom
+categories: projects
 ---
 is this right?

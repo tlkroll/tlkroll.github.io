@@ -12,4 +12,7 @@ plugins:
   - jekyll-feed
 
 markdown: kramdown
-#making some changes just for the hell of it
+
+collections:
+  category:
+    output: true
