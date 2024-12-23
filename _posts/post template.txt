@@ -2,4 +2,5 @@
 layout: post
 title:  title
 author: Tom
+categories: 
 ---
