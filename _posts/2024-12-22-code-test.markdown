@@ -1,7 +1,0 @@
----
-layout: post
-title:  code post test
-author: Tom
-categories: code
----
-if this works, we're good

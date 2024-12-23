@@ -9,5 +9,6 @@ permalink: /blog/
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       {{ post.excerpt }}
     </li>
+    <br>
   {% endfor %}
 </ul>
