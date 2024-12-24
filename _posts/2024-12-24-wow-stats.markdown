@@ -1,0 +1,37 @@
+---
+layout: post
+title:  WoW Stats - Fictional online betting algorithm
+author: Tom
+categories: code
+excerpt: "Jupyter Notebook with Python and machine learning to predict arena match outcomes" 
+---
+This was my capstone project at WGU. Sometimes I have a hard time coming up with a topic for a fictional project like this one and in this case I just used the first Kaggle dataset that looked interesting to me. I used to play World of Warcraft, so I was familiar with the topic and thought it would be a fun project. I thought that arena matches may be easy to predict based on class or class combination, but I was surprised to learn that race was the best predictor of a match outcome.
+
+<h2>Languages, Libraries, and Environment</h2>
+
+- Python
+- sklearn
+- pandas
+- matplotlib
+- Jupyter
+
+<h2>Concepts</h2>
+
+- Machine Learning
+- Graphical Representation of Data
+- Jupyter Notebooks
+
+<h2>Requirements followed for this project</h2>
+- One descriptive method and one nondescriptive (predictive or prescriptive) method
+- Collected or available datasets
+- Decision support functionality
+- Ability to support featurizing, parsing, cleaning, and wrangling datasets
+- Methods and algorithms supporting data exploration and preparation
+- Data visualization functionalities for data exploration and inspection
+- Implementation of interactive queries
+- Implementation of machine-learning methods and algorithms
+- Functionalities to evaluate the accuracy of the data product
+
+<br>
+<h2>Jupyter Notebook</h2>
+<iframe src="https://www.kaggle.com/embed/tomkroll/notebook5cb08c7c63?kernelSessionId=186060251" height="800" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="notebook5cb08c7c63"></iframe>
