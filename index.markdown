@@ -1,7 +1,7 @@
 ---
 layout: universal
-image: /thumbnail.png
 title: Main Page
+image: /thumbnail.png
 ---
 <p>My name is Tom Kroll and I am currently a graduate student in Georgia Tech's OMS Cybersecurity program.</p> 
 

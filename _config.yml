@@ -1,11 +1,12 @@
 seo:
-  title: Tom Kroll
   image: /thumbnail.png
+  title: Tom Kroll
   description: >- 
     Learning about programming, reverse engineering, binary exploitation, and everything else I can about cybersecurity
+  baseurl: ""
   url: "https://tlkroll.github.io" 
+
 layouts_dir: "my_layouts"
-github_username:  tlkroll
 
 theme: jekyll-theme-midnight
 plugins:
