@@ -5,8 +5,6 @@ author: Tom
 categories: code
 excerpt: "C++ application for storing and retrieving student details" 
 ---
-<h1>Student Roster</h1>
-
 This is a simple application that was good practice for learning the concepts of object oriented programming by developing classes and class methods. This application parses lists of student data and creates student objects which are stored in an array. The application defines "getter" and "setter" methods to manipulate student data.
 
 <h2>Languages</h2>

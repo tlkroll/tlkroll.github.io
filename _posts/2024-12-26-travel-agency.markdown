@@ -1,44 +1,52 @@
 ---
 layout: post
-title:  Store Inventory
+title:  Travel Agency
 author: Tom
 categories: code
-excerpt: "Introductory project to Full Stack Development" 
+excerpt: "Full Stack application with a Java backend and SQL database" 
 ---
-The Store Inventory project was the final project for my Java Frameworks class at WGU. This is a Spring application with an HTML front end and a Java back end which tracks parts inventory and customers for a fictional online store. This project was a good introduction to the concept of Full Stack Development. I will just post a link to the repository rather than the code because there are so many files.
+This was the final project for my Backend Programming course at WGU. This was a good introduction to full stack applications, which was not an easy thing to pick up. Most of this application was built beforehand, but gave me good insight into how front end and back end interact with one another and communicate with a database. These full stack classes were actually great experience for building this website as well! Because of the size of this application, I included a repository link instead of posting the code here directly.
+
+This is an application for a fictional travel agency created using a Spring framework with an Angular front end, Java back end, and a MySQL database for storing company and customer information.
 
 <h2>Languages and Framework</h2>
 
 - Java
 - HTML
+- MySQL
 - Spring
+- Angular
 
 <h2>Concepts</h2>
 
-- Full stack development
+- Full Stack Development
+- Database Management
 - REST API
 
 <h2>Requirements followed for this project</h2>
 
 A.   Create a new Java project using Spring Initializr, with each of the following dependencies:
 
-  • Spring Data JPA (spring-boot starter-data-jpa)
-  • Rest Repositories (spring-boot-starter-data-rest)
-  • MySQL Driver (mysql-connector-java)
-  • Lombok
+  - Spring Data JPA (spring-boot starter-data-jpa)
+
+  - Rest Repositories (spring-boot-starter-data-rest)
+
+  - MySQL Driver (mysql-connector-java)
+
+  - Lombok
 
 Note: Since the application properties will be empty, you will need to copy over the supplied application properties.
 
 B.   Create your subgroup and project by logging into GitLab using the web link provided and do the following:
 
-  • connect your new Java project
-  • commit with a message and push when you complete each of the tasks listed below (parts B to F, etc.)
+  - connect your new Java project
+  - commit with a message and push when you complete each of the tasks listed below (parts B to F, etc.)
 
 Note: Any submissions that do not have a commit after each task will not be evaluated.
 
 Note: You may commit and push whenever you want to back up your changes, even if a task is not complete.
 
-  • Submit a copy of the git repository URL and a copy of the repository branch history retrieved from your repository, which must include the commit messages and dates.
+  - Submit a copy of the git repository URL and a copy of the repository branch history retrieved from your repository, which must include the commit messages and dates.
 
 Note: Wait until you have completed all the following prompts before you create your copy of the repository branch history.
 
@@ -54,10 +62,13 @@ E.   Write code for the dao package that includes repository interfaces for the 
 
 F.   Write code for the services package that includes each of the following:
 
-  •    a purchase data class with a customer cart and a set of cart items
-  •    a purchase response data class that contains an order tracking number
-  •    a checkout service interface
-  •    a checkout service implementation class
+  - a purchase data class with a customer cart and a set of cart items
+
+  - a purchase response data class that contains an order tracking number
+
+  - a checkout service interface
+
+  - a checkout service implementation class
 
 G.   Write code to include validation to enforce the inputs needed by the Angular front-end.
 
@@ -71,14 +82,13 @@ Note: Make sure the customer information is not overwritten each time you run th
 
 J.   Run your integrated application by adding a customer order for a vacation with two excursions using the unmodified Angular front-end. Provide screenshots for the following:
 
-  • that your application does not generate a network error when adding the data
+  - that your application does not generate a network error when adding the data
 
-  • your database tables using MySQL Workbench to show the data was successfully added
+  - your database tables using MySQL Workbench to show the data was successfully added
 
 Note: The screenshot should include the front-end view and the inspection console in the browser.
 
 K.   Demonstrate professional communication in the content and presentation of your submission.
 
 <h2>Repository Link</h2>
-
-<a href="https://github.com/tlkroll/StoreInventory">Store Inventory</a>
+<a href="https://github.com/tlkroll/TravelAgency">Travel Agency</a>
