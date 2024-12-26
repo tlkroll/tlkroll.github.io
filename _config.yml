@@ -1,10 +1,9 @@
-title: Tom Kroll
-email: tlkroll@yahoo.com
-image: /thumbnail.png
-description: >- 
-  Learning about programming, reverse engineering, binary exploitation, and everything else I can about cybersecurity
-baseurl: "" 
-url: "" 
+seo:
+  title: Tom Kroll
+  image: /thumbnail.png
+  description: >- 
+    Learning about programming, reverse engineering, binary exploitation, and everything else I can about cybersecurity
+  url: "https://tlkroll.github.io" 
 layouts_dir: "my_layouts"
 github_username:  tlkroll
 
