@@ -2,7 +2,6 @@ title: Tom Kroll
 email: tlkroll@yahoo.com
 description: >- 
   Learning about programming, reverse engineering, binary exploitation, and everything else I can about cybersecurity
-image: /thumbnail.png
 baseurl: "" 
 url: "" 
 layouts_dir: "my_layouts"
