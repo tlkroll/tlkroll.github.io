@@ -5,6 +5,8 @@ description: >-
 baseurl: ""
 url: "" 
 
+google_analytics: G-W19Q2WFH1P
+
 layouts_dir: "my_layouts"
 
 theme: jekyll-theme-midnight
