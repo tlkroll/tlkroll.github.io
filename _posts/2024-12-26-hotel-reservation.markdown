@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Hotel Reservation
-author: Tom
 categories: code
 excerpt: "Another full stack application - this time using multithreading" 
 ---

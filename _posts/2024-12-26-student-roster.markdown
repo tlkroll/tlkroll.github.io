@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Student Roster
-author: Tom
 categories: code
 excerpt: "C++ application for storing and retrieving student details" 
 ---

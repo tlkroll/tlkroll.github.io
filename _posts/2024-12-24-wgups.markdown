@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  WGUPS
-author: Tom
 categories: code
 excerpt: "Package delivery routing and tracking application using Python" 
 ---

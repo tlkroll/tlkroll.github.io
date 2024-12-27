@@ -1,11 +1,9 @@
 ---
 layout: post
 title:  Overwriting entries in the Global Offset Table
-author: Tom
 categories: write-ups
 excerpt: "Learning about overwriting GOT entries using the picoCTF format string 3 challenge."
 ---
-<br>
 <p>
 <h2>Overwriting entries in the Global Offset Table using a vulnerable printf function</h2>
 This write-up builds on what was learned about exploiting printf vulnerabilities in my write-up on the picoCTF <a href="/write-ups/2024/12/22/format-string-exploitation.html">format string 2</a> challenge. In the format string 3 challenge there is a similar vulnerability, but this time instead of overwriting a variable within the program it will be used to overwrite a pointer to an entry in the Global Offset Table so that it will call a different libc function.

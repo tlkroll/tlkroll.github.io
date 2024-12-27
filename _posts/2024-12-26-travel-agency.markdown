@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Travel Agency
-author: Tom
 categories: code
 excerpt: "Full Stack application with a Java backend and SQL database" 
 ---

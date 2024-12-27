@@ -3,7 +3,6 @@ layout: universal
 title: Projects
 permalink: /projects/
 ---
-<h2>Nothing here yet</h2> 
 This page is intended to feature non-coding projects I've worked on. To see examples of programming projects, please visit my <a href="/code">Code</a> page
 <ul>
   {% for post in site.categories.projects %}

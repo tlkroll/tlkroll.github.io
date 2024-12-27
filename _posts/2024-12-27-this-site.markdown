@@ -1,0 +1,26 @@
+---
+layout: post
+title:  This Website
+categories: projects
+excerpt: "Lessons learned while creating this website" 
+---
+<p>This site was created as a place where I could showcase projects that I've worked on, but it ended up being a project all its own! I am not a front-end person, but because of what I'm learning through this process, I've started to become fairly comfortable in this environment.</p>
+
+<h2>GitHub Pages</h2>
+<p>My plain old GitHub repository was pretty bland and I wanted something that would both stand out to potential employers and be a little easier on the eyes when referencing my own pages, so I decided to use GitHub Pages to make a nicer looking website. GitHub Pages supports using the Jekyll site generation framework, so I set up a <a href="https://github.com/tlkroll/tlkroll.github.io">repository</a> for this page and chose the <a href="https://github.com/pages-themes/midnight">Midnight</a> theme to work with. I forked the theme's repository, edited the CSS a bit to suit my tastes (those ugly green buttons had to go), and started creating content. Git was, and remains, a bit frustrating to deal with at times, but now that I have a rhythm for everything this setup is extremely easy to manage.</p>
+
+<h2>Jekyll</h2>
+<p>There was a bit of a learning curve with Jekyll, but it's a great tool for automating front end code after the initial setup is complete. As an example, Jekyll uses what they call "front matter", which is a small header at the top of the markdown files for posts like the one I'm writing right now. Here you can see what the front matter looks like for this file:</p>
+<img src="/images/front-matter.png">
+<p>Using the category tag allows the different pages of my website to be automatically populated with the correct posts as soon as I create a new file. Here is an example of the projects page:</p>
+<img src="/images/projects-markdown.png">
+<p>How cool is that?? Jekyll definitely made life easy for this project.
+
+<h2>Contact Form</h2>
+<p>Originally, I just used a mailto link for my email even though I knew it was susceptible to scraping and that I would end up receiving spam and phishing emails because of this. That would have been a terrible example for a website focused on cybersecurity, so I did a bit of research and found Formspree. This site offers a simple, free contact form which forwards information to my personal email and it even includes free spam filtering. Unfortunately you have to pay for things like a custom redirect page but not too bad for a free service!</p>
+
+<h2>Google Analytics</h2>
+<p>I have mixed feelings about including anything from Google on my website, but I really wanted to see what kind of traffic I was receiving and monitoring the behavior of that traffic should be a good way to guide any future development or promotion. This was a fairly simple process, especially with Jekyll. All I had to do was sign up for a free Google Analytics account and create a new line in my <b>_config.yml</b> file with the <b>google_analytics:</b> tag and my ID number. Now you're being stalked by Google on every inch of my website &#128521;</p>
+
+<h2>Logisim</h2>
+<p>This will be my next project on this site. I want to feature my Logisim projects from school, but there is currently no way to do that. I will attempt to compile the Logisim source into Webassembly and embed that on the site. We'll see how that goes!

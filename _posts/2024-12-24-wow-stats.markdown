@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  WoW Stats - Fictional online betting algorithm
-author: Tom
 categories: code
 excerpt: "Jupyter Notebook with Python and machine learning to predict arena match outcomes" 
 ---

@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Political Survey
-author: Tom
 categories: code
 excerpt: "C++ survey program for guessing the user's political party using AI" 
 ---

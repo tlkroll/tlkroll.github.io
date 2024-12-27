@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  My new site is live!
-author: Tom
 categories: blog
 excerpt: "My first attempt at a personal website"
 ---

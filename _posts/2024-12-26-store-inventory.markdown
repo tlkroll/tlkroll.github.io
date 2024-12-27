@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Store Inventory
-author: Tom
 categories: code
 excerpt: "Introductory project to Full Stack Development" 
 ---
