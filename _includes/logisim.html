@@ -11,6 +11,7 @@
         await cheerpjInit();
         cheerpjCreateDisplay(800, 600);
         await cheerpjRunJar("/app/logisim/logisim.jar");
+        const blob = await cjFileBlob("/apps/logisim/Assignment.circ");
       })();
     </script>
     </div>
