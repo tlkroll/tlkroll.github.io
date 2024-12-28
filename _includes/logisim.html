@@ -10,8 +10,8 @@
       (async function () {
         await cheerpjInit();
         cheerpjCreateDisplay(800, 600);
-        cheerpjAddStringFile("/files/assignment.circ", "/app/logisim/Assignment.circ");
         await cheerpjRunJar("/app/logisim/logisim.jar");
+        cheerpjAddStringFile("/files/assignment.circ", "/app/logisim/Assignment.circ");
       })();
     </script>
     </div>
