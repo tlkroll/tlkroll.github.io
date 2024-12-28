@@ -11,7 +11,7 @@
         await cheerpjInit();
         cheerpjCreateDisplay(800, 600);
         await cheerpjRunJar("/app/logisim/logisim.jar");
-        cheerpjAddStringFile("/files/assignment.circ", "/app/logisim/Assignment.circ");
+        cheerpjRunJar("/app/logisim/Assignment.circ", "/files/assignment.circ");
       })();
     </script>
     </div>
