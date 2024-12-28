@@ -8,12 +8,9 @@
     <div text-align="center">
     <script>
       (async function () {
-        await cheerpjInit({
-            preloadResources: {"/app/Assignment.circ": [1]}
-        }
-        );
+        await cheerpjInit();
         cheerpjCreateDisplay(800, 600);
-        await cheerpjRunJar("/app/logisim/logisim.jar");
+        await cheerpjRunJar("/app/logisim/logisim-evolution.jar");
       })();
     </script>
     </div>
