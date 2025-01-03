@@ -4,6 +4,8 @@ title:  Computer Architecture
 categories: projects
 excerpt: "Logisim project for my Computer Architecture course" 
 ---
-This will feature my Logisim project from school where I had to design an ALU. However, posting this is turning out to be a bit of a project on its own. I want to have an interactive app embedded in this page instead of just screenshots, but that is proving to be quite a challenge. I have Logisim running in the browser now, but now I need to figure out a way it can access the project file. To be continued... 
+For the final project in my Computer Architecture course I had to design an ALU in Logisim. This was a great way to learn how logic gates are used in a practical application and how they interact with the binary numbering system. Below, I've linked a modified version of Logisim which loads my assignment file and is run from inside the browser, which was a project in itself to create.
 
-{% include logisim.html %}
+<p><a href="/logisim.html" target="_blank">Load Logisim projects in the browser</a></p>
+
+<p><a href="https://github.com/tlkroll/logisim" target="_blank">GitHub Repository</a></p>

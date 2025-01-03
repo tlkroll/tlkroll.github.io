@@ -1,16 +1,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>CheerpJ test</title>
+    <title>Logisim Projects</title>
     <script src="https://cjrtnc.leaningtech.com/3.0/cj3loader.js"></script>
   </head>
   <body>
+    <div id="logisim">
     <script>
       (async function () {
         await cheerpjInit();
-        cheerpjCreateDisplay(800, 600);
+        cheerpjCreateDisplay(-1, -1, document.getElementById("logisim"));
         await cheerpjRunJar("/app/logisim/logisim.jar");
       })();
     </script>
+    </div>
   </body>
 </html>

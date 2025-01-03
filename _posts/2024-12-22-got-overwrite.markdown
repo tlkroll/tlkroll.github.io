@@ -4,10 +4,19 @@ title:  Overwriting entries in the Global Offset Table
 categories: write-ups
 excerpt: "Learning about overwriting GOT entries using the picoCTF format string 3 challenge."
 ---
+<br>
 <p>
 <h2>Overwriting entries in the Global Offset Table using a vulnerable printf function</h2>
 This write-up builds on what was learned about exploiting printf vulnerabilities in my write-up on the picoCTF <a href="/write-ups/2024/12/22/format-string-exploitation.html">format string 2</a> challenge. In the format string 3 challenge there is a similar vulnerability, but this time instead of overwriting a variable within the program it will be used to overwrite a pointer to an entry in the Global Offset Table so that it will call a different libc function.
 </p>
+<br>
+<ol>
+<a href="#format-string-3"><li>format string 3</li></a>
+<a href="#got"><li>The GOT, PLT, and GOT.PLT</li></a>
+<a href="#exploit"><li>The Final Exploit</li></a>
+</ol>
+
+<div id="format-string-3" class="section-link">
 <h2>format string 3</h2>
 <p>When the program is run, it prints a line which leaks the address of the GOT entry for the <b>setvbuf</b> function and then waits for input:<br><br>
 <img src="https://raw.githubusercontent.com/tlkroll/got-overwrite/refs/heads/main/fs3-1.png">
@@ -55,6 +64,9 @@ int main() {
 <p>
 Looking at the source, we can identify two goals. The main objective will be to overwrite the pointer to the <b>puts</b> function with a pointer to the <b>system</b> function so that instead of printing <b>/bin/sh</b>, the program will make a <b>system</b> call to <b>/bin/sh</b> instead, granting us a shell. To accomplish this, we will need to exploit the vulnerable printf function which repeats user input.
 </p>
+</div>
+
+<div id="got" class="section-link">
 <h2>The Global Offset Table</h2>
 <p>My understanding of the GOT is that it is a copy of libc used by a program which is stored in a random memory location at runtime in order to prevent the type of attack we are performing here. But because we have access to the copy of libc being used and the location of <b>setvbuf</b> has been leaked, we are able to calculate offsets and find the memory locations of other functions within libc.<br><br>
 Finding the locations of functions and calculating their offsets can all be accomplished using pwntools, but I wanted to know exactly what was going on under the hood, so I took a look at the libc file which was supplied with this challenge. First, I used the <b>readelf</b> function to find the location of <b>setvbuf</b>:<br><br>
@@ -106,6 +118,9 @@ Entering an <b>ls</b> command shows the contents of the local directory where I 
 <p>
 I believe the errors in the above examples are from the breakpoints I set to examine memory. Unfortunately, because of the dynamic locations which are generated every time the program is run and the fact that the payload can not be crafted manually and sent to the program beforehand, a script must be used to complete this challenge. But at least we have a solid grasp of what is going on behind the scenes.
 </p>
+</div>
+
+<div id="exploit" class="section-link">
 <h2>Final Exploit</h2>
 <p>I won't go over the breakdown of the printf vulnerability because I already covered that in my <a href="/write-ups/2024/12/22/format-string-exploitation.html">format string 2</a> write-up, but I used those methods to determine that our printf string is in location 38. Using all of the information we have so far, here is the script I used, adapted from Wiebe Willems's script <a href="https://blog.nviso.eu/2024/05/23/format-string-exploitation-a-hands-on-exploration-for-linux/">here</a>:<br>
 {% highlight ruby %}
@@ -143,6 +158,8 @@ if __name__ == "__main__":
     main()
 {% endhighlight %}
 </p>
+</div>
+
 <p>
 After running this script we have a shell on the remote server and can just cat the flag.txt file!<br>
 (I wasn't able to do this in the picoCTF webshell and had to use a Kali VM)<br><br>
