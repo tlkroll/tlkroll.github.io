@@ -77,4 +77,4 @@ D.  Demonstrate professional communication in the content and presentation of yo
 
 <h2>Repository Link</h2>
 
-<a href="https://github.com/tlkroll/HotelReservation">Hotel Reservation</a>
+<a href="https://github.com/tlkroll/HotelReservation" target="_blank">Hotel Reservation</a>

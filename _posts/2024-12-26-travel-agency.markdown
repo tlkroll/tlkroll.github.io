@@ -90,4 +90,4 @@ Note: The screenshot should include the front-end view and the inspection consol
 K.   Demonstrate professional communication in the content and presentation of your submission.
 
 <h2>Repository Link</h2>
-<a href="https://github.com/tlkroll/TravelAgency">Travel Agency</a>
+<a href="https://github.com/tlkroll/TravelAgency" target="_blank">Travel Agency</a>

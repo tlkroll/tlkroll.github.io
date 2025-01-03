@@ -16,7 +16,7 @@ excerpt: "Lessons learned while creating this website"
 
 <div id="github" class="section-link">
 <h2>GitHub Pages</h2>
-<p>My plain old GitHub repository was pretty bland and I wanted something that would both stand out to potential employers and be a little easier on the eyes when referencing my own pages, so I decided to use GitHub Pages to make a nicer looking website. GitHub Pages supports using the Jekyll site generation framework, so I set up a <a href="https://github.com/tlkroll/tlkroll.github.io">repository</a> for this page and chose the <a href="https://github.com/pages-themes/midnight">Midnight</a> theme to work with. I forked the theme's repository, edited the CSS a bit to suit my tastes (those ugly green buttons had to go), and started creating content. Git was, and remains, a bit frustrating to deal with at times, but now that I have a rhythm for everything this setup is extremely easy to manage.</p>
+<p>My plain old GitHub repository was pretty bland and I wanted something that would both stand out to potential employers and be a little easier on the eyes when referencing my own pages, so I decided to use GitHub Pages to make a nicer looking website. GitHub Pages supports using the Jekyll site generation framework, so I set up a <a href="https://github.com/tlkroll/tlkroll.github.io" target="_blank">repository</a> for this page and chose the <a href="https://github.com/pages-themes/midnight" target="_blank">Midnight</a> theme to work with. I forked the theme's repository, edited the CSS a bit to suit my tastes (those ugly green buttons had to go), and started creating content. Git was, and remains, a bit frustrating to deal with at times, but now that I have a rhythm for everything this setup is extremely easy to manage.</p>
 </div>
 
 <div id="jekyll" class="section-link">
@@ -52,5 +52,5 @@ excerpt: "Lessons learned while creating this website"
  <img src="/images/assignment-circ.png">
  </p>
 
-<p>I learned a lot from this seemingly small project! If you would like to see the source for yourself, you can visit the repository <a href="https://github.com/tlkroll/logisim">here</a></p>
+<p>I learned a lot from this seemingly small project! If you would like to see the source for yourself, you can visit the repository <a href="https://github.com/tlkroll/logisim" target="_blank">here</a></p>
 </div>

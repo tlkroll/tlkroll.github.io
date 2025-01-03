@@ -122,7 +122,7 @@ I believe the errors in the above examples are from the breakpoints I set to exa
 
 <div id="exploit" class="section-link">
 <h2>Final Exploit</h2>
-<p>I won't go over the breakdown of the printf vulnerability because I already covered that in my <a href="/write-ups/2024/12/22/format-string-exploitation.html">format string 2</a> write-up, but I used those methods to determine that our printf string is in location 38. Using all of the information we have so far, here is the script I used, adapted from Wiebe Willems's script <a href="https://blog.nviso.eu/2024/05/23/format-string-exploitation-a-hands-on-exploration-for-linux/">here</a>:<br>
+<p>I won't go over the breakdown of the printf vulnerability because I already covered that in my <a href="/write-ups/2024/12/22/format-string-exploitation.html">format string 2</a> write-up, but I used those methods to determine that our printf string is in location 38. Using all of the information we have so far, here is the script I used, adapted from Wiebe Willems's script <a href="https://blog.nviso.eu/2024/05/23/format-string-exploitation-a-hands-on-exploration-for-linux/" target="_blank">here</a>:<br>
 {% highlight ruby %}
 from pwn import *
 
