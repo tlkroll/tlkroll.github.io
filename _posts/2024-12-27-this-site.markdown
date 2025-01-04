@@ -44,7 +44,8 @@ excerpt: "Lessons learned while creating this website"
 
 <p>So in order to load my project file, I had to first convert the resource object to a file object:<br>
 <br>
-<img src="/images/getResourceAsFile.png">
+<img src="/images/getResourceAsFile.png"><br>
+This method was copied from <a href="https://stackoverflow.com/users/4575433/lukas-masuch" target="_blank">Lukas Masuch</a>'s reply to <a href="https://stackoverflow.com/questions/676097/java-resource-as-file" target="_blank">this</a> post on Stack Overflow and worked perfectly as written.
 </p>
 
  <p>Then, I had to add a couple lines of code to add it into the filesToOpen array in the source. Once the file is in this array, Logisim will load it on startup:<br>
@@ -52,5 +53,5 @@ excerpt: "Lessons learned while creating this website"
  <img src="/images/assignment-circ.png">
  </p>
 
-<p>I learned a lot from this seemingly small project! If you would like to see the source for yourself, you can visit the repository <a href="https://github.com/tlkroll/logisim" target="_blank">here</a></p>
+<p>I learned a lot from this seemingly small project! If you would like to run the JAR locally or download the project file, I have them both in the repository <a href="https://github.com/tlkroll/logisim" target="_blank">here</a>.</p>
 </div>
