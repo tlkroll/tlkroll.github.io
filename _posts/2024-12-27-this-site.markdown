@@ -53,5 +53,10 @@ This method was copied from <a href="https://stackoverflow.com/users/4575433/luk
  <img src="/images/assignment-circ.png">
  </p>
 
+<p>Now everything loaded, but the window on startup was very small. After a lot of hunting through the code, I was able to find this entry at line 257 in the <b>/gui/Frame.java</b> file, comment it out, and add my own line at 258 so that the window would be maximized on startup:<br>
+<br>
+<img src="/images/maximize.png">
+</p>
+
 <p>I learned a lot from this seemingly small project! If you would like to run the JAR locally or download the project file, I have them both in the repository <a href="https://github.com/tlkroll/logisim" target="_blank">here</a>.</p>
 </div>
