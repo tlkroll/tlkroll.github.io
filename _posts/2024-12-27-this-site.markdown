@@ -45,15 +45,12 @@ excerpt: "Lessons learned while creating this website"
 <p>So in order to load my project file, I had to first convert the resource object to a file object:<br>
 <br>
 <img src="/images/getResourceAsFile.png"><br>
-This method was copied from <a href="https://stackoverflow.com/users/4575433/lukas-masuch" target="_blank">Lukas Masuch</a>'s reply to <a href="https://stackoverflow.com/questions/676097/java-resource-as-file" target="_blank">this</a> post on Stack Overflow and worked perfectly as written.
-</p>
-
- <p>Then, I had to add a couple lines of code to add it into the filesToOpen array in the source. Once the file is in this array, Logisim will load it on startup:<br>
+This method was copied from <a href="https://stackoverflow.com/users/4575433/lukas-masuch" target="_blank">Lukas Masuch</a>'s reply to <a href="https://stackoverflow.com/questions/676097/java-resource-as-file" target="_blank">this</a> post on Stack Overflow and worked perfectly as written. I added this method into the <b>/gui/start/Startup.java</b> file and then I had to write a couple lines of code to add the file object to the filesToOpen array. Once the file is in this array, Logisim will load it on startup:<br>
  <br>
  <img src="/images/assignment-circ.png">
  </p>
 
-<p>Now everything loaded, but the window on startup was very small. After a lot of hunting through the code, I was able to find this entry at line 257 in the <b>/gui/Frame.java</b> file, comment it out, and add my own line at 258 so that the window would be maximized on startup:<br>
+<p>Now everything loaded, but the window on startup was very small. After a lot of hunting through the code, I was able to find this entry at line 257 in the <b>/gui/main/Frame.java</b> file, comment it out, and add my own line at 258 so that the window would be maximized on startup:<br>
 <br>
 <img src="/images/maximize.png">
 </p>
