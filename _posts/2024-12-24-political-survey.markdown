@@ -2,6 +2,7 @@
 layout: post
 title:  Political Survey
 categories: code
+comments: true
 excerpt: "C++ survey program for guessing the user's political party using AI" 
 ---
 This was a fun project I completed for the Artificial Intelligence course on study.com as a transfer course for WGU. This is one of my earliest projects, so it could be much cleaner, but I am still proud of it and I think it is entertaining as well.
@@ -475,3 +476,23 @@ int main(){
 };
 
 {% endhighlight %}
+
+{% if page.comments %} 
+
+<br><br>
+<p>
+<div id="disqus_thread"></div>
+<script>
+    (function() { 
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://tlkroll.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+
+{% endif %} 

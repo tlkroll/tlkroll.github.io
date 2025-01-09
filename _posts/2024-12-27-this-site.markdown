@@ -2,6 +2,7 @@
 layout: post
 title:  This Website
 categories: projects
+comments: true
 excerpt: "Lessons learned while creating this website" 
 ---
 <p>This site was created as a place where I could showcase projects that I've worked on, but it ended up being a project all its own! I am not a front-end person, but because of what I'm learning through this process, I've started to become fairly comfortable in this environment.</p>
@@ -57,3 +58,23 @@ This method was copied from <a href="https://stackoverflow.com/users/4575433/luk
 
 <p>I learned a lot from this seemingly small project! If you would like to run the JAR locally or download the project file, I have them both in the repository <a href="https://github.com/tlkroll/logisim" target="_blank">here</a>.</p>
 </div>
+
+{% if page.comments %} 
+
+<br><br>
+<p>
+<div id="disqus_thread"></div>
+<script>
+    (function() { 
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://tlkroll.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+
+{% endif %} 

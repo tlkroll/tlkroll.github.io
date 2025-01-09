@@ -2,6 +2,7 @@
 layout: post
 title:  Hotel Reservation
 categories: code
+comments: true
 excerpt: "Another full stack application - this time using multithreading" 
 ---
 This was the final project for my Advanced Java Programming course at WGU. Most of this application was already built ahead of time, but taught me a lot about front end frameworks and how they interact with backend applications and databases. I included a link to the repository instead of posting the code here because it is a full stack application with a lot of files. 
@@ -78,3 +79,23 @@ D.  Demonstrate professional communication in the content and presentation of yo
 <h2>Repository Link</h2>
 
 <a href="https://github.com/tlkroll/HotelReservation" target="_blank">Hotel Reservation</a>
+
+{% if page.comments %} 
+
+<br><br>
+<p>
+<div id="disqus_thread"></div>
+<script>
+    (function() { 
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://tlkroll.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+
+{% endif %} 

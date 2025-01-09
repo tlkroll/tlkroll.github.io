@@ -2,6 +2,7 @@
 layout: post
 title:  WoW Stats - Fictional online betting algorithm
 categories: code
+comments: true
 excerpt: "Jupyter Notebook with Python and machine learning to predict arena match outcomes" 
 ---
 This was my capstone project at WGU. Sometimes I have a hard time coming up with a topic for a fictional project like this one and in this case I just used the first Kaggle dataset that looked interesting to me. I used to play World of Warcraft, so I was familiar with the topic and thought it would be a fun project. I thought that arena matches may be easy to predict based on class or class combination, but I was surprised to learn that race was the best predictor of a match outcome.
@@ -34,3 +35,23 @@ This was my capstone project at WGU. Sometimes I have a hard time coming up with
 <br>
 <h2>Jupyter Notebook</h2>
 <iframe src="https://www.kaggle.com/embed/tomkroll/notebook5cb08c7c63?kernelSessionId=186060251" height="800" style="margin: 0 auto; width: 100%; max-width: 950px;" frameborder="0" scrolling="auto" title="notebook5cb08c7c63"></iframe>
+
+{% if page.comments %} 
+
+<br><br>
+<p>
+<div id="disqus_thread"></div>
+<script>
+    (function() { 
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://tlkroll.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+
+{% endif %} 

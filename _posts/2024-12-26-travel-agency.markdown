@@ -2,6 +2,7 @@
 layout: post
 title:  Travel Agency
 categories: code
+comments: true
 excerpt: "Full Stack application with a Java backend and SQL database" 
 ---
 This was the final project for my Backend Programming course at WGU. This was a good introduction to full stack applications, which was not an easy thing to pick up. Most of this application was built beforehand, but gave me good insight into how front end and back end interact with one another and communicate with a database. These full stack classes were actually great experience for building this website as well! Because of the size of this application, I included a repository link instead of posting the code here directly.
@@ -91,3 +92,23 @@ K.   Demonstrate professional communication in the content and presentation of y
 
 <h2>Repository Link</h2>
 <a href="https://github.com/tlkroll/TravelAgency" target="_blank">Travel Agency</a>
+
+{% if page.comments %} 
+
+<br><br>
+<p>
+<div id="disqus_thread"></div>
+<script>
+    (function() { 
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://tlkroll.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+
+{% endif %} 

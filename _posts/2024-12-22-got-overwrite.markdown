@@ -2,6 +2,7 @@
 layout: post
 title:  Overwriting entries in the Global Offset Table
 categories: write-ups
+comments: true
 excerpt: "Learning about overwriting GOT entries using the picoCTF format string 3 challenge."
 ---
 <br>
@@ -165,3 +166,23 @@ After running this script we have a shell on the remote server and can just cat 
 (I wasn't able to do this in the picoCTF webshell and had to use a Kali VM)<br><br>
 I hope this was helpful. This challenge was a great way to learn about the Global Offset Table and also get some practice with gdb and pwntools. Reverse engineering and binary exploitation are the most fun things I have learned about so far on my cybersecurity journey!
 </p>
+
+{% if page.comments %} 
+
+<br><br>
+<p>
+<div id="disqus_thread"></div>
+<script>
+    (function() { 
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://tlkroll.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+
+{% endif %} 

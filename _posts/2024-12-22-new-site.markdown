@@ -2,8 +2,29 @@
 layout: post
 title:  My new site is live!
 categories: blog
+comments: true
 excerpt: "My first attempt at a personal website"
 ---
 I didn't really care for the look of a plain GitHub page, so I chose to make an actual website on GitHub Pages. This uses Jekyll to generate a lot of the features and I chose the Midnight theme from GitHub's supported themes. The only thing I'm not satisfied with is that the header buttons don't show up on mobile devices unless viewed in landscape mode. Other than that, I'm looking forward to moving all my content over to this platform!
 
 So far I've only moved over a couple CTF write-ups, which was quite a bit of work to edit. After all the old stuff is moved over in the coming weeks making new posts should be much easier. 
+
+{% if page.comments %} 
+
+<br><br>
+<p>
+<div id="disqus_thread"></div>
+<script>
+    (function() { 
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://tlkroll.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+
+{% endif %} 

@@ -2,6 +2,7 @@
 layout: post
 title:  WGUPS
 categories: code
+comments: true
 excerpt: "Package delivery routing and tracking application using Python" 
 ---
 This was the final project for my Data Structures and Algorithms 2 class at WGU. Unfortunately this was only my second class at WGU - long before I learned the concepts of object-oriented programming. This project could be much simpler if classes were implemented for the trucks. If I could do this over again, I would have insisted on making this one of my last classes. We were also not allowed to use dictionaries and were required to use a DIY hashing algorithm.
@@ -275,3 +276,23 @@ class ChainingHashTable:
               bucket_list.remove([kv[0],kv[1]])
 
 {% endhighlight %}
+
+{% if page.comments %} 
+
+<br><br>
+<p>
+<div id="disqus_thread"></div>
+<script>
+    (function() { 
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://tlkroll.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</p>
+
+{% endif %} 
