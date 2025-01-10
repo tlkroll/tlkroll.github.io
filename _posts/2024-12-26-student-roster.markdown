@@ -8,11 +8,9 @@ excerpt: "C++ application for storing and retrieving student details"
 This is a simple application that was good practice for learning the concepts of object oriented programming by developing classes and class methods. This application parses lists of student data and creates student objects which are stored in an array. The application defines "getter" and "setter" methods to manipulate student data.
 
 <h2>Languages</h2>
-
 - C++
 
 <h2>Concepts</h2>
-
 - Object oriented programming methods
 
 <h2>Main Source File</h2>
@@ -285,23 +283,3 @@ void Student::print() {
 
 
 {% endhighlight %}
-
-{% if page.comments %} 
-
-<br><br>
-<p>
-<div id="disqus_thread"></div>
-<script>
-    (function() { 
-        var d = document, s = d.createElement('script');
-        
-        s.src = 'https://tlkroll.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</p>
-
-{% endif %} 

@@ -10,23 +10,3 @@ For the final project in my Computer Architecture course I had to design an ALU 
 <p><a href="/logisim.html" target="_blank">Load Logisim projects in the browser</a></p>
 
 <p><a href="https://github.com/tlkroll/logisim" target="_blank">GitHub Repository</a></p>
-
-{% if page.comments %} 
- 
-<br><br>
-<p>
-<div id="disqus_thread"></div>
-<script>
-    (function() { 
-        var d = document, s = d.createElement('script');
-        
-        s.src = 'https://tlkroll.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</p>
-
-{% endif %} 

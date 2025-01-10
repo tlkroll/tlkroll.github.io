@@ -8,13 +8,11 @@ excerpt: "Introductory project to Full Stack Development"
 The Store Inventory project was the final project for my Java Frameworks class at WGU. This is a Spring application with an HTML front end and a Java back end which tracks parts inventory and customers for a fictional online store. This project was a good introduction to the concept of Full Stack Development. I will just post a link to the repository rather than the code because there are so many files.
 
 <h2>Languages and Framework</h2>
-
 - Java
 - HTML
 - Spring
 
 <h2>Concepts</h2>
-
 - Full stack development
 - REST API
 
@@ -82,23 +80,3 @@ K.   Demonstrate professional communication in the content and presentation of y
 <h2>Repository Link</h2>
 
 <a href="https://github.com/tlkroll/StoreInventory">Store Inventory</a>
-
-{% if page.comments %} 
-
-<br><br>
-<p>
-<div id="disqus_thread"></div>
-<script>
-    (function() { 
-        var d = document, s = d.createElement('script');
-        
-        s.src = 'https://tlkroll.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</p>
-
-{% endif %} 

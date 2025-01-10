@@ -10,7 +10,6 @@ This was the final project for my Backend Programming course at WGU. This was a 
 This is an application for a fictional travel agency created using a Spring framework with an Angular front end, Java back end, and a MySQL database for storing company and customer information.
 
 <h2>Languages and Framework</h2>
-
 - Java
 - HTML
 - MySQL
@@ -18,7 +17,6 @@ This is an application for a fictional travel agency created using a Spring fram
 - Angular
 
 <h2>Concepts</h2>
-
 - Full Stack Development
 - Database Management
 - REST API
@@ -92,23 +90,3 @@ K.   Demonstrate professional communication in the content and presentation of y
 
 <h2>Repository Link</h2>
 <a href="https://github.com/tlkroll/TravelAgency" target="_blank">Travel Agency</a>
-
-{% if page.comments %} 
-
-<br><br>
-<p>
-<div id="disqus_thread"></div>
-<script>
-    (function() { 
-        var d = document, s = d.createElement('script');
-        
-        s.src = 'https://tlkroll.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</p>
-
-{% endif %} 

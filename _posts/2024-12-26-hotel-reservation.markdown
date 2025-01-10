@@ -10,7 +10,6 @@ This was the final project for my Advanced Java Programming course at WGU. Most 
 This is an application for a fictional hotel created using a Spring framework with an Angular front end, Java back end, and a MySQL database for storing company and customer information. Multithreading was used to display welcome messages in English and French. This application was packaged using Docker to create a portable container.
 
 <h2>Languages and Framework</h2>
-
 - Java
 - HTML
 - MySQL
@@ -19,7 +18,6 @@ This is an application for a fictional hotel created using a Spring framework wi
 - Docker
 
 <h2>Concepts</h2>
-
 - Full Stack Development
 - Database Management
 - Multithreading
@@ -77,25 +75,4 @@ Note: Remember to commit and push your changes to GitLab.
 D.  Demonstrate professional communication in the content and presentation of your submission.
 
 <h2>Repository Link</h2>
-
 <a href="https://github.com/tlkroll/HotelReservation" target="_blank">Hotel Reservation</a>
-
-{% if page.comments %} 
-
-<br><br>
-<p>
-<div id="disqus_thread"></div>
-<script>
-    (function() { 
-        var d = document, s = d.createElement('script');
-        
-        s.src = 'https://tlkroll.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</p>
-
-{% endif %} 

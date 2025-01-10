@@ -6,7 +6,8 @@ comments: true
 excerpt: "Lessons learned while creating this website" 
 ---
 <p>This site was created as a place where I could showcase projects that I've worked on, but it ended up being a project all its own! I am not a front-end person, but because of what I'm learning through this process, I've started to become fairly comfortable in this environment.</p>
-<br>
+
+<h3>Sections:</h3>
 <ol>
 <a href="#github"><li>GitHub Pages</li></a>
 <a href="#jekyll"><li>Jeykyll</li></a>
@@ -22,10 +23,12 @@ excerpt: "Lessons learned while creating this website"
 
 <div id="jekyll" class="section-link">
 <h2>Jekyll</h2>
-<p>There was a bit of a learning curve with Jekyll, but it's a great tool for automating front end code after the initial setup is complete. As an example, Jekyll uses what they call "front matter", which is a small header at the top of the markdown files for posts like the one I'm writing right now. Here you can see what the front matter looks like for this file:</p>
+<p>There was a bit of a learning curve with Jekyll, but it's a great tool for automating front end code after the initial setup is complete. As an example, Jekyll uses what they call "front matter", which is a small header at the top of the markdown files for posts like the one I'm writing right now. Here you can see what the front matter looks like for this file:<br>
 <img src="/images/front-matter.png">
-<p>Using the category tag allows the different pages of my website to be automatically populated with the correct posts as soon as I create a new file. Here is an example of the projects page:</p>
+</p>
+<p>Using the category tag allows the different pages of my website to be automatically populated with the correct posts as soon as I create a new file. Here is an example of the projects page:<br>
 <img src="/images/projects-markdown.png">
+</p>
 <p>How cool is that?? Jekyll definitely made life easy for this project.
 </div>
 
@@ -44,37 +47,15 @@ excerpt: "Lessons learned while creating this website"
 <p>This turned out to be kind of a big project. I wanted to do more than just show screenshots of my projects and explain them - I wanted the projects to be interactive. I found Cheerpj, which was a great way to host Java programs in the browser, but then I needed to run Logisim. By itself, Logisim ran fine, but in order for it to load my assignment, I had to modify the source code within the JAR file. Although I had three different Java courses in school, we learned nothing about JARs. There was a filesToOpen array which loaded files at startup, but it would not add my file and I could not figure out why. Through Stack Overflow, I learned that files referenced within a JAR are resources and not files.</p> 
 
 <p>So in order to load my project file, I had to first convert the resource object to a file object:<br>
-<br>
-<img src="/images/getResourceAsFile.png"><br>
-This method was copied from <a href="https://stackoverflow.com/users/4575433/lukas-masuch" target="_blank">Lukas Masuch</a>'s reply to <a href="https://stackoverflow.com/questions/676097/java-resource-as-file" target="_blank">this</a> post on Stack Overflow and worked perfectly as written. I added this method into the <b>/gui/start/Startup.java</b> file and then I had to write a couple lines of code to add the file object to the filesToOpen array. Once the file is in this array, Logisim will load it on startup:<br>
- <br>
+<img src="/images/getResourceAsFile.png">
+</p>
+<p>This method was copied from <a href="https://stackoverflow.com/users/4575433/lukas-masuch" target="_blank">Lukas Masuch</a>'s reply to <a href="https://stackoverflow.com/questions/676097/java-resource-as-file" target="_blank">this</a> post on Stack Overflow and worked perfectly as written. I added this method into the <b>/gui/start/Startup.java</b> file and then I had to write a couple lines of code to add the file object to the filesToOpen array. Once the file is in this array, Logisim will load it on startup:<br>
  <img src="/images/assignment-circ.png">
  </p>
 
 <p>Now everything loaded, but the window on startup was very small. After a lot of hunting through the code, I was able to find this entry at line 257 in the <b>/gui/main/Frame.java</b> file, comment it out, and add my own line at 258 so that the window would be maximized on startup:<br>
-<br>
 <img src="/images/maximize.png">
 </p>
 
 <p>I learned a lot from this seemingly small project! If you would like to run the JAR locally or download the project file, I have them both in the repository <a href="https://github.com/tlkroll/logisim" target="_blank">here</a>.</p>
 </div>
-
-{% if page.comments %} 
-
-<br><br>
-<p>
-<div id="disqus_thread"></div>
-<script>
-    (function() { 
-        var d = document, s = d.createElement('script');
-        
-        s.src = 'https://tlkroll.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</p>
-
-{% endif %} 

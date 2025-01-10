@@ -8,8 +8,6 @@ excerpt: "C++ survey program for guessing the user's political party using AI"
 This was a fun project I completed for the Artificial Intelligence course on study.com as a transfer course for WGU. This is one of my earliest projects, so it could be much cleaner, but I am still proud of it and I think it is entertaining as well.
 
 This application has two main parts - a survey which collects data and a game which guesses the user's political party affiliation in as few questions as possible. The survey portion asks the user 10 political questions and then asks with which political party they most closely align. This data is then used to update a file which records the probability of each party to answer individual questions a certain way. The party guessing game makes use of this historical data by updating party affiliation probability with each question answered and returns a guess when the probability threshold is reached.
-<br>
-
 
 <h2>Languages</h2>
 
@@ -476,23 +474,3 @@ int main(){
 };
 
 {% endhighlight %}
-
-{% if page.comments %} 
-
-<br><br>
-<p>
-<div id="disqus_thread"></div>
-<script>
-    (function() { 
-        var d = document, s = d.createElement('script');
-        
-        s.src = 'https://tlkroll.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</p>
-
-{% endif %} 

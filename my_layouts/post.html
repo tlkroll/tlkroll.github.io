@@ -5,3 +5,24 @@ layout: universal
 <p><b>{{ page.date | date_to_string }}</b></p>
 
 {{ content }}
+
+{% if page.comments %} 
+<br>
+<p>
+<h3>Feedback is welcome and encouraged! Please leave a comment below:</h3>
+<div id="disqus_thread">
+<script>
+    (function() { 
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://tlkroll.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</p>
+
+{% endif %} 
