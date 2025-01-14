@@ -2,6 +2,7 @@
 layout: post
 title:  First Week at Georgia Tech
 categories: blog
+comments: true
 excerpt: "Some impressions from my first week at Georgia Tech" 
 ---
 
