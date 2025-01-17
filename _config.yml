@@ -18,3 +18,5 @@ markdown: kramdown
 collections:
   category:
     output: true
+
+includes_dir: /%0a%0a%0a%0awww.linkedin.com/in/5258965548/
