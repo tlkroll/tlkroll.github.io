@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <title>Interactive Open Redirect Impact Demo</title>
+  <style>
+    body {
+      background: #121212;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff99;
+    }
+    h1 {
+      text-align: center;
+      color: #00ff99;
+    }
+    section {
+      background: #222;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+    pre {
+      background: #333;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 14px;
+    }
+    button.copy-btn {
+      background: #00ff99;
+      border: none;
+      color: #111;
+      padding: 0.3rem 0.8rem;
+      margin-left: 1rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button.copy-btn:hover {
+      background: #00cc77;
+    }
+    form.fake-login {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    input, button.submit-btn {
+      padding: 0.7rem 1rem;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+    input {
+      background: #444;
+      color: #eee;
+    }
+    button.submit-btn {
+      background: #00ff99;
+      color: #111;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button.submit-btn:hover {
+      background: #00cc77;
+    }
+    #capturedData {
+      background: #111;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      font-style: italic;
+      color: #ff5555;
+      word-break: break-word;
+    }
+    small {
+      color: #666;
+      font-size: 0.8rem;
+      display: block;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Open Redirect Impact Demo</h1>
+
+  <section>
+    <h2>URL Parameters</h2>
+    <pre id="urlParams">Loading...</pre>
+    <button class="copy-btn" id="copyParamsBtn">Copy Parameters</button>
+  </section>
+
+  <section>
+    <h2>Referrer Info</h2>
+    <pre id="referrer">Loading...</pre>
+    <small>The above shows the page that linked or redirected you here.</small>
+  </section>
+
+  <section>
+    <h2>Browser Info</h2>
+    <pre id="browserInfo">Loading...</pre>
+  </section>
+
+  <section>
+    <h2>Simulated Phishing Login</h2>
+    <p>Try entering your credentials below. This simulates how an attacker might steal your info after redirecting you.</p>
+    <form id="fakeLoginForm" class="fake-login">
+      <input type="text" name="username" placeholder="Username or email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit" class="submit-btn">Log In</button>
+    </form>
+    <div id="capturedData" style="display:none;"></div>
+  </section>
+
+  <script>
+    // Show URL parameters with pretty formatting
+    const urlParams = Object.fromEntries(new URLSearchParams(window.location.search));
+    const urlParamsEl = document.getElementById('urlParams');
+    urlParamsEl.textContent = Object.keys(urlParams).length
+      ? JSON.stringify(urlParams, null, 2)
+      : '[No URL parameters found]';
+
+    // Copy parameters to clipboard
+    document.getElementById('copyParamsBtn').addEventListener('click', () => {
+      navigator.clipboard.writeText(urlParamsEl.textContent)
+        .then(() => alert('URL parameters copied to clipboard!'))
+        .catch(() => alert('Failed to copy.'));
+    });
+
+    // Show referrer
+    const referrer = document.referrer || '[No referrer found]';
+    document.getElementById('referrer').textContent = referrer;
+
+    // Show browser info
+    const browserInfo = {
+      userAgent: navigator.userAgent,
+      platform: navigator.platform,
+      language: navigator.language,
+      cookiesEnabled: navigator.cookieEnabled,
+      screenResolution: `${window.screen.width} x ${window.screen.height}`
+    };
+    document.getElementById('browserInfo').textContent = JSON.stringify(browserInfo, null, 2);
+
+    // Handle fake phishing login submission
+    document.getElementById('fakeLoginForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const captured = {
+        username: formData.get('username'),
+        password: formData.get('password'),
+        timestamp: new Date().toISOString(),
+        referrer,
+        urlParams,
+        browserInfo
+      };
+      const capturedDiv = document.getElementById('capturedData');
+      capturedDiv.style.display = 'block';
+      capturedDiv.textContent = 'Captured credentials:\n' + JSON.stringify(captured, null, 2);
+
+      // Reset form
+      e.target.reset();
+      alert('Fake login submitted! Data is displayed below for demonstration only.');
+    });
+  </script>
+</body>
+</html>
