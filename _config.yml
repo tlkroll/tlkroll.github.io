@@ -1,7 +1,5 @@
 image: /thumbnail.png
-title: Tom Kroll
-description: >- 
-  Security Research | Binary Analysis | Reverse Engineering
+title: <img src="/thumbnail.png">
 baseurl: ""
 url: "" 
 
