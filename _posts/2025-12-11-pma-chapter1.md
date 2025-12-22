@@ -38,7 +38,7 @@ Then for both machines I selected Internal Network for the Virtualbox network ad
 <div>
 <h2>Windows 10</h2>
 <p>
-When I reached Chapter 5, I had no choice but to create a VM with a newer operating system. There are no legacy versions of IDA Pro available and Ghidra is 64-bit only. For these cases, I installed a Windows 10 VM, which allowed me to browse modern websites including VirusTotal, install IDA Pro, and even install some modern PE analysis tools like PE Bear. Another upside to this is that once I'm done with the labs in PMA, I can analyze some more modern actual malware samples!
+When I reached Chapter 5, I had no choice but to create a VM with a newer operating system. There are no legacy versions of IDA Pro available and Ghidra is 64-bit only. For these cases, I installed a Windows 10 VM, which allowed me to browse modern websites including VirusTotal, install IDA Pro, and even install some modern PE analysis tools like PE Bear. Another upside to this is that once I'm done with the labs in PMA, I can analyze some more modern actual malware samples! I'm actually glad that I was not able to upload to VirusTotal the first time around because it gives away some of the lab answers (I'm assuming it did not do this at the time PMA was written):<br>
 <img src="/images/lab1/vt-1.png">
 </p>
 </div>
