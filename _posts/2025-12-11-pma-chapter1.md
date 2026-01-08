@@ -41,6 +41,14 @@ Then for both machines I selected Internal Network for the Virtualbox network ad
 When I reached Chapter 5, I had no choice but to create a VM with a newer operating system. There are no legacy versions of IDA Pro available and Ghidra is 64-bit only. For these cases, I installed a Windows 10 VM, which allowed me to browse modern websites including VirusTotal, install IDA Pro, and even install some modern PE analysis tools like PE Bear. Another upside to this is that once I'm done with the labs in PMA, I can analyze some more modern actual malware samples! I'm actually glad that I was not able to upload to VirusTotal the first time around because it gives away some of the lab answers (I'm assuming it did not do this at the time PMA was written):<br>
 <img src="/images/lab1/vt-1.png">
 </p>
+<p>
+Disabling Windows Defender so that malware samples weren't deleted was another issue. First, Windows Defender and Tamper Protection need to be disabled in the Windows security settings. To prevent Windows Defender from running again on startup, a value with a name of <b>DisableAntiSpyware</b> and the data <b>1</b> needs to be added to the registry key <b>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender</b>:<br>
+<img src="/images/lab1/reg-1.png">
+</p>
+<p>
+To prevent Tamper Protection from running on startup, a sub-key named <b>Real-Time Protection</b> also needs to be added to this key. Then, a value is added to this sub-key with the name <b>DisableRealtimeMonitoring</b> and the data <b>1</b>:<br>
+<img src="/images/lab1/reg-2.png">
+</p>
 </div>
 <br><br>
 <div>
