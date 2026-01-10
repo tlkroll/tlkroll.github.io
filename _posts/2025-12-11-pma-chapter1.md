@@ -54,6 +54,6 @@ To prevent Tamper Protection from running on startup, a sub-key named <b>Real-Ti
 <div>
 <h2>Conclusion</h2>
 <p>
-I know this was a short write-up, but if anyone else is in the same situation this bit of information could save you hours of frustration. The best way to transfer anything is just use a shared folder. If you absolutely need a browser, K-Meleon is definitely the way to go. I like that you can toggle JS/cookies/images, etc. right on the toolbar. Some of the tech in Practical Malware Analysis is a bit dated, so it requires a second more modern VM, but it's been worth the extra effort because I'm learning a ton!
+The setup for the labs in Practical Malware Analysis gave me some great experience with virtualization. Setting up VMs, shared drives, virtualized networks, and working with the registry are all valuable skills that will be helpful when pursuing roles in this field. I also ended up with a modern VM that can be used to analyze real world malware samples in the future!
 </p>
 </div>
