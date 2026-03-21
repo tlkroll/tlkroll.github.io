@@ -30,6 +30,7 @@ excerpt: "Lessons learned while creating this website"
 <img src="/images/projects-markdown.png">
 </p>
 <p>How cool is that?? Jekyll definitely made life easy for this project.
+</p>
 </div>
 
 <div id="contact" class="section-link">

@@ -48,7 +48,7 @@ Now the host machine is ready to connect to the VM. In WinDbg under the <b>Attac
 <img src="/images/kdb/windbg-network.png">
 </p>
 <p>
-The connection is now made and <b>Ctrl + V</b> can be used to toggle verbose output, which shows drivers being loaded/unloaded:<br>
+The connection is now made and <b>Ctrl + Alt + V</b> can be used to toggle verbose output, which shows drivers being loaded/unloaded:<br>
 <img src="/images/kdb/windbg-connected.png">
 </p>
 </div>
