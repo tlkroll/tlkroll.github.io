@@ -7,7 +7,7 @@ excerpt: "Patching PMA Windows 7 Driver to Work on Windows 10"
 ---
 <div>
 <p>
-Labs 10-1 and 10-3 from Practical Malware Analysis include drivers which must be copied to <b>C:\Windows\System32</b>. The original drivers were 32-bit and written for Windows XP. Since XP is practically unusable at this point, new 64-bit drivers written for Windows 7 were made available on the PMA GitHub repo. This is again starting to become a problem because I encountered difficulties finding a Windows 7 VM image and the <b>Lab10-03.sys</b> driver crashes on Windows 10. I discovered the source of this problem is hard-coded offsets used as pointers to Windows structures that change with each version (sometimes more than once per version). You can download the patched driver and testing certificate <a href="/files/Lab10-03-Patched.7z">here</a>.
+Labs 10-1 and 10-3 from Practical Malware Analysis include drivers which must be copied to <b>C:\Windows\System32</b>. The original drivers were 32-bit and written for Windows XP. Since XP is practically unusable at this point, new 64-bit drivers written for Windows 7 were made available on the PMA GitHub repo. This is again starting to become a problem because I encountered difficulties finding a Windows 7 VM image and the <b>Lab10-03.sys</b> driver crashes on Windows 10. I discovered the source of this problem is hard-coded offsets used as pointers to Windows structures that change with each version (sometimes more than once per version).
 </p>
 </div>
 <br>
