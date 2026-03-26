@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Patching Kernel Drivers
+title:  Debugging and Patching Kernel Drivers
 categories: malware
 comments: true
 excerpt: "Patching PMA Windows 7 Driver to Work on Windows 10" 
@@ -8,6 +8,9 @@ excerpt: "Patching PMA Windows 7 Driver to Work on Windows 10"
 <div>
 <p>
 Labs 10-1 and 10-3 from Practical Malware Analysis include drivers which must be copied to <b>C:\Windows\System32</b>. The original drivers were 32-bit and written for Windows XP. Since XP is practically unusable at this point, new 64-bit drivers written for Windows 7 were made available on the PMA GitHub repo. This is again starting to become a problem because I encountered difficulties finding a Windows 7 VM image and the <b>Lab10-03.sys</b> driver crashes on Windows 10. I discovered the source of this problem is hard-coded offsets used as pointers to Windows structures that change with each version (sometimes more than once per version).
+</p>
+<p>
+No Starch Press has given me permission to distribute the patched version of the Lab 10-03 driver which can be downloaded <a href="/files/Lab10-03-Patched.7z">here</a>. <b>WARNING: DO NOT INSTALL THIS DRIVER ON YOUR HOST SYSTEM. These samples are intended to be run in sandbox VMs.</b> This particular driver only hides the process making calls to it, but it's still a bad idea to install anything designed to imitate malware. The archive password is "malware".
 </p>
 </div>
 <br>
@@ -83,7 +86,7 @@ Before patching the driver I had to confirm my suspicions. After the offsets wer
 Stepping through got me through the end of the function with no errors! After resuming execution I saw that the malicious executable in the VM was generating pop-ups like it was supposed to and the process was not listed in Task Manager!
 </p>
 <p>
-Now I had to open the driver in a hex editor and locate the incorrect values:<br>
+Now I had to open the driver in a hex editor and replace the incorrect values:<br>
 <img src="/images/driver-patch/hexeditor.png"><br>
 Then, I saved the patched driver and transferred it back to the VM.
 </p>
@@ -118,5 +121,5 @@ I successfully patched the driver for a different Windows version and it is work
 <br>
 <h1>Conclusion</h1>
 <p>
-The hard-coded values in the original driver for Lab10-03 made it difficult to complete this lab initially. Fortunately this gave me the opportunity to get some practice with WinDbg to actually debug and patch a kernel driver. This was a valuable learning experience that taught me even more about Windows internals than the lab intended.
+The hard-coded values in the original driver for Lab10-03 made it difficult to complete this lab initially. Fortunately this gave me the opportunity to get some practice with WinDbg to actually debug and patch a kernel driver. This was a valuable learning experience that taught me even more about Windows internals than the lab intended. I look forward to diving even deeper into researching Windows internals like Driver Signature Enforcement in the future.
 </p>
