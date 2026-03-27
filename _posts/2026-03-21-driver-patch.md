@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Debugging and Patching Kernel Drivers
-categories: malware
+categories: malware featured
+thumbnail: /images/driver-patch/hexeditor.png
 comments: true
 excerpt: "Patching PMA Windows 7 Driver to Work on Windows 10" 
 ---
